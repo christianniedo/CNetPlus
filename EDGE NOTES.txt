@@ -1,0 +1,19 @@
+!@edge
+conf t 
+	router ospf 1
+	network 22.0.0.1 0.0.0.0 area 0
+	network 200.0.0.0 0.0.0.255 area 0
+	network 10.22.22.1 0.0.0.255 area 0
+	end
+	show ip route ospf 
+	
+	
+	
+!@corebaba
+conf t 
+	ip routing
+	router ospf 1
+	network 10.22.0.0 0.0.255.255 area 0
+	
+do show ip ospf neigh
+do show ip route ospf

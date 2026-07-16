@@ -1,0 +1,20 @@
+config t
+ip domain-name azuread22.com
+ip name-server 10.22.1.8
+
+
+
+route add 10.0.0.0 mask 255.0.0.0 10.22.1.4
+route add 200.0.0.0 mask 255.255.255.0 10.22.1.4
+
+
+
+browser
+admin gui: http://208.8.8.133/otrs/index.pl
+admin
+C1sc0123
+
+
+customer interface:http://208.8.8.133/otrs/customer.pl
+user1
+C1sc0123
